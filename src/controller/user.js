@@ -80,8 +80,8 @@ const forgetPassword = async(req,res)=>{
                  id:user[0]._id
             })
             let url = `http://localhost:5173/resetpassword?token=${token}`
-            // await EmailService.forgetPassword({name:`${user[0].Name} `,email:'prabhashok2501@gmail.com',url})
-            await EmailService.forgetPassword({name:`${user[0].Name}`,email:user[0].email,url})
+         await EmailService.forgetPassword({name:`${user[0].Name} `,email:'prabhashok2501@gmail.com',url})
+            // await EmailService.forgetPassword({name:`${user[0].Name}`,email:user[0].email,url})
             res.status(200).send({
                 message:"Reset Password Link Sent",
                 url
