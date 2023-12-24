@@ -1,6 +1,8 @@
 import sgMail from '@sendgrid/mail'
 
+
 const sendMail = ({to,subject,text,html})=>{
+   
         sgMail.setApiKey(process.env.SENDGRID_API_KEY)
         const msg = {
         to:to, // Change to your recipient
